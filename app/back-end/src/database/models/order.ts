@@ -193,7 +193,6 @@ Order.init({
     type: DataTypes.STRING,
     defaultValue: null
   },
-
 }, {
   sequelize: db,
   modelName: 'orders',
