@@ -1,11 +1,22 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect } from 'vitest';
 
-import { mount } from '@vue/test-utils'
-import HelloWorld from '../HelloWorld.vue'
+import { mount } from '@vue/test-utils';
+import Table from '../Table.vue';
+import Aside from '../Aside.vue';
 
-describe('HelloWorld', () => {
+describe('Table', () => {
   it('renders properly', () => {
-    const wrapper = mount(HelloWorld, { props: { msg: 'Hello Vitest' } })
-    expect(wrapper.text()).toContain('Hello Vitest')
-  })
-})
+    const wrapper = mount(Table);
+    expect(wrapper.text()).toContain("Notas Fiscais");
+    expect(wrapper.text()).toContain("Visualize as notas fiscais que você tem");
+    expect(wrapper.classes('main-content')).toBe(true);
+  });
+});
+
+describe('Aside', () => {
+  it('renders properly', () => {
+    const wrapper = mount(Aside);
+    expect(wrapper.text()).toContain("Notas fiscais");
+    expect(wrapper.classes('sider-fornecedor')).toBe(true);
+  });
+});

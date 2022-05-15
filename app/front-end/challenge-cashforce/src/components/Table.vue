@@ -2,11 +2,10 @@
 import TableHeader from './TableHeader.vue';
 import { onMounted, ref } from 'vue';
 import axios from 'axios';
-import 'dotenv/config';
 
-const url = "https://alexandre-pimentel-cashforce.herokuapp.com/order"
 const orders = ref([]);
 const isLoading = ref(true);
+const url = "https://alexandre-pimentel-cashforce.herokuapp.com/order";
 
 const STATUS = ['Pendente de confirmação', 'Pedido confirmado', 'Não reconhece o pedido', 'Mercadoria não recebida', 'Recebida com avaria', 'Devolvida', 'Recebida com devolução parcial', 'Recebida e confirmada', 'Pagamento Autorizado']; // Status enviados no email
 
@@ -24,7 +23,7 @@ function formatValue(value) {
 // ideia para solução abaixo encontrada em : https://stackoverflow.com/questions/64117116/how-can-i-use-async-await-in-the-vue-3-0-setup-function-using-typescript
 
 onMounted(async () => {
-  const result = await axios.get(process.env.URL || 'localhost:3005/order');
+  const result = await axios.get(url);
   const { data } = result;
   const newData = Array.from(data).map(({ buyer, provider, orderStatusBuyer, emissionDate, value }) => {
     return {
@@ -36,7 +35,6 @@ onMounted(async () => {
       status: STATUS[orderStatusBuyer]
     }
   })
-  console.log(newData);
   orders.value = newData;
   isLoading.value = false;
 })
