@@ -41,7 +41,7 @@ module.exports = {
       },
       
       emailChecked: {
-        type: Sequelize.TINYINT,
+        type: Sequelize.INTEGER,
         defaultValue: 0,
       },
       
@@ -56,7 +56,7 @@ module.exports = {
       },
       
       cashforceAdm: {
-        type: Sequelize.TINYINT,
+        type: Sequelize.INTEGER,
         defaultValue: 0,
       },
     });

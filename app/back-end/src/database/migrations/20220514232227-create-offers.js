@@ -41,12 +41,12 @@ module.exports = {
       },
     
       paymentStatusSponsor: {
-        type: Sequelize.TINYINT,
+        type: Sequelize.INTEGER,
         defaultValue: 0
       },
     
       paymentStatusProvider: {
-        type: Sequelize.TINYINT,
+        type: Sequelize.INTEGER,
         defaultValue: 0
       },
     

@@ -148,7 +148,7 @@ module.exports = {
       },
     
       confirm: {
-        type: Sequelize.TINYINT,
+        type: Sequelize.INTEGER,
         defaultValue: 1
       },
     

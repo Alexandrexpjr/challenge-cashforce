@@ -70,12 +70,12 @@ Offer.init({
   },
 
   paymentStatusSponsor: {
-    type: DataTypes.TINYINT,
+    type: DataTypes.INTEGER,
     defaultValue: 0
   },
 
   paymentStatusProvider: {
-    type: DataTypes.TINYINT,
+    type: DataTypes.INTEGER,
     defaultValue: 0
   },
 
