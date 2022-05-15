@@ -10,7 +10,7 @@
 .header-sistema {
   width: 100%;
   height: 64px;
-  margin-left: 20%;
+  border-bottom: 1px solid rgb(235,236,243);
 }
 
 </style>

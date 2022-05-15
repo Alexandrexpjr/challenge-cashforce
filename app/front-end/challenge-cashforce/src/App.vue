@@ -9,11 +9,18 @@ import Aside from './components/Aside.vue';
   </header>
 
   <main>
-    <Header />
     <Aside />
+    <Header />
     <Table />
   </main>
 </template>
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: sans-serif
+}
 </style>

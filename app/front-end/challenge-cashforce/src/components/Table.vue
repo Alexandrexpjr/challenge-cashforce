@@ -42,28 +42,70 @@ onMounted(async () => {
 </script>
 
 <template>
-  <TableHeader />
-  <table v-if="!isLoading">
-    <thead>
-      <tr>
-        <th>NOTA FISCAL</th>
-        <th>SACADO</th>
-        <th>CEDENTE</th>
-        <th>EMISSÃO</th>
-        <th>VALOR</th>
-        <th>STATUS</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="order in orders">
-        <td v-for="info in order">
-          {{ info }}
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="main-content">
+    <TableHeader />
+    <table v-if="!isLoading">
+      <thead>
+        <tr class="table-headers">
+          <th>NOTA FISCAL</th>
+          <th>SACADO</th>
+          <th>CEDENTE</th>
+          <th>EMISSÃO</th>
+          <th>VALOR</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="order in orders" class="table-data">
+          <td v-for="info in order">
+            {{ info }}
+          </td>
+          <td>
+            <button type="button">Dados do cedente</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <style>
+  .main-content {
+    margin: 20px;
+    float: left;
+  }
+
+  table {
+    margin-top: 50px;
+    border-collapse: collapse;
+  }
+
+  tr td {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .table-data {
+    border-radius: 5%;
+    border: 1px solid #ddd;
+  }
+
+  .table-headers th {
+    padding: 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.3)
+  }
+
+  tr button {
+    padding: 7px 15px;
+    border-radius:20px;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  tr td:nth-child(5), tr td:nth-child(6)  {
+    color: rgb(0,173,140);
+  }
 
 </style>
