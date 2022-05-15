@@ -8,9 +8,9 @@ class Cnpj extends Model {
 
   public companyType!: string;
 
-  public createdAt!: string;
+  public createdAt!: Date;
 
-  public updatedAt!: string;
+  public updatedAt!: Date;
 }
 
 Cnpj.init({

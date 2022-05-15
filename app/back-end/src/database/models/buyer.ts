@@ -43,9 +43,9 @@ class Buyer extends Model {
 
   public situationDate!: string;
 
-  public createdAt!: string;
+  public createdAt!: Date;
 
-  public updatedAt!: string;
+  public updatedAt!: Date;
 
   public cnpjId!: number;
 

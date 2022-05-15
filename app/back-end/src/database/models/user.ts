@@ -18,9 +18,9 @@ class User extends Model {
 
   public emailChecked!: TinyIntegerDataType;
 
-  public createdAt!: string;
+  public createdAt!: Date;
 
-  public updatedAt!: string;
+  public updatedAt!: Date;
 
   public cashforceAdm!: TinyIntegerDataType;
 }
