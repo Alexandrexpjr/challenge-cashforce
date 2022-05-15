@@ -2,7 +2,7 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('providers', { 
+    await queryInterface.createTable('sponsors', { 
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -105,12 +105,6 @@ module.exports = {
         defaultValue: null
       },
     
-      documents: {
-        type:Sequelize.STRING,
-        defaultValue: null
-      },
-    
-    
       phoneNumber: {
         type: Sequelize.STRING,
         defaultValue: null
@@ -160,6 +154,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('providers');
+    await queryInterface.dropTable('sponsors');
   }
 };

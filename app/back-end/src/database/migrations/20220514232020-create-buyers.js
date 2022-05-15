@@ -135,7 +135,7 @@ module.exports = {
         type: Sequelize.STRING,
         defaultValue: null
       },
-     });
+    });
   },
 
   down: async (queryInterface, Sequelize) => {
