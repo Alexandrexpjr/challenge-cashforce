@@ -25,8 +25,16 @@ export interface IOrder {
 }
 
 export interface IOrderWithData extends IOrder {
-  cnpj?: string,
-  userName?: string,
-  buyerName?: string,
-  providerName?: string,
+  cnpj?: {
+    cnpj: string,
+  },
+  user?: {
+    name: string
+  },
+  buyer?: {
+    name: string
+  },
+  provider?: {
+    name: string
+  },
 }
