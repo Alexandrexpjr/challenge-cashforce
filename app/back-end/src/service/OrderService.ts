@@ -11,22 +11,18 @@ export default class OrderService {
       include: [
         {
           model: CnpjModel,
-          as: 'cnpj',
           attributes: ['cnpj'],
         },
         {
           model: UserModel,
-          as: 'userName',
           attributes: ['name'],
         },
         {
           model: BuyerModel,
-          as: 'buyerName',
           attributes: ['name'],
         },
         {
           model: ProviderModel,
-          as: 'providerName',
           attributes: ['name'],
         },
       ],
