@@ -41,7 +41,7 @@ module.exports = {
       },
     
       orderId: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         defaultValue: null,
         onUpdate: 'CASCADE',
         onDelete: 'SET NULL',

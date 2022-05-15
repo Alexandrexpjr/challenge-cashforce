@@ -59,7 +59,7 @@ Orderportion.init({
   },
 
   orderId: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     defaultValue: null,
     onUpdate: 'CASCADE',
     onDelete: 'SET NULL',
