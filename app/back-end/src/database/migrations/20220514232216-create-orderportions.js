@@ -26,7 +26,7 @@ module.exports = {
       },
     
       availableToMarket: {
-        type: Sequelize.TINYINT,
+        type: Sequelize.INTEGER,
         defaultValue: 1
       },
     

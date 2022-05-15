@@ -1,5 +1,6 @@
 import express from 'express';
-
+import cors from 'cors';
+import orderRoute from './route/OrderRoute';
 export default class App {
   public app: express.Express;
 
@@ -18,6 +19,8 @@ export default class App {
 
     this.app.use(accessControl);
     this.app.use(express.json());
+    this.app.use(cors());
+    this.app.use('/order', orderRoute);
   }
 
   public start(PORT: string | number):void {
@@ -28,3 +31,5 @@ export default class App {
   }
 }
 
+// A execução dos testes  depende dessa exportação
+export const { app } = new App();

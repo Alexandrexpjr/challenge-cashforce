@@ -64,7 +64,7 @@ User.init({
   },
 
   emailChecked: {
-    type: DataTypes.TINYINT,
+    type: DataTypes.INTEGER,
     defaultValue: 0,
   },
 
@@ -79,7 +79,7 @@ User.init({
   },
 
   cashforceAdm: {
-    type: DataTypes.TINYINT,
+    type: DataTypes.INTEGER,
     defaultValue: 0,
   },
 }, {
