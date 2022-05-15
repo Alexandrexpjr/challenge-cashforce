@@ -54,6 +54,12 @@ Instale as dependências
   npm install
 ```
 
+Faça o build da aplicação
+
+```bash
+  npm run build
+```
+
 Inicie o servidor
 
 ```bash
