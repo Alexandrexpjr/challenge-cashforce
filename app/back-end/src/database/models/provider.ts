@@ -1,8 +1,8 @@
-import { DataTypes, Model, TinyIntegerDataType } from 'sequelize';
+import { DataTypes, Model } from 'sequelize';
 import db from '.';
 import Cnpj from './cnpj';
 
-class Buyer extends Model {
+class Provider extends Model {
   public id!: number;
 
   public name!: string;
@@ -37,6 +37,14 @@ class Buyer extends Model {
 
   public state!: string;
 
+  public bank!: string;
+
+  public bankAgency!: string;
+
+  public account!: string;
+
+  public documents!: string;
+
   public phoneNumber!: string;
 
   public situation!: string;
@@ -49,12 +57,10 @@ class Buyer extends Model {
 
   public cnpjId!: number;
 
-  public confirm!: TinyIntegerDataType;
-
   public email!: string;
 }
 
-Buyer.init({
+Provider.init({
   id: {
     allowNull: false,
     autoIncrement: true,
@@ -142,6 +148,27 @@ Buyer.init({
     defaultValue: null
   },
 
+  bank: {
+    type:DataTypes.STRING,
+    defaultValue: null
+  },
+
+  bankAgency: {
+    type:DataTypes.STRING,
+    defaultValue: null
+  },
+
+  account: {
+    type:DataTypes.STRING,
+    defaultValue: null
+  },
+
+  documents: {
+    type:DataTypes.STRING,
+    defaultValue: null
+  },
+
+
   phoneNumber: {
     type: DataTypes.STRING,
     defaultValue: null
@@ -187,13 +214,12 @@ Buyer.init({
     type: DataTypes.STRING,
     defaultValue: null
   },
-
 }, {
   sequelize: db,
-  modelName: 'buyers',
+  modelName: 'providers',
 });
 
-Buyer.belongsTo(Cnpj)
+Provider.belongsTo(Cnpj)
 
-export default Buyer;
+export default Provider;
 
