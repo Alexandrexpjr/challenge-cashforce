@@ -83,7 +83,6 @@ User.init({
     defaultValue: 0,
   },
 }, {
-  underscored: true,
   sequelize: db,
   modelName: 'users',
 });

@@ -41,7 +41,6 @@ Cnpj.init({
     allowNull: false,
   },
 }, {
-  underscored: true,
   sequelize: db,
   modelName: 'cnpjs',
 });
