@@ -211,7 +211,7 @@ Sponsor.init({
   modelName: 'sponsors',
 });
 
-Sponsor.belongsTo(Cnpj)
+Sponsor.belongsTo(Cnpj);
 
 export default Sponsor;
 

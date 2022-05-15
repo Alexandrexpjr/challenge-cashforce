@@ -219,7 +219,7 @@ Provider.init({
   modelName: 'providers',
 });
 
-Provider.belongsTo(Cnpj)
+Provider.belongsTo(Cnpj);
 
 export default Provider;
 

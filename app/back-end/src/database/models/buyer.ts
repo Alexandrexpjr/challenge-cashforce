@@ -193,7 +193,6 @@ Buyer.init({
   modelName: 'buyers',
 });
 
-Buyer.belongsTo(Cnpj)
+Buyer.belongsTo(Cnpj);
 
 export default Buyer;
-
