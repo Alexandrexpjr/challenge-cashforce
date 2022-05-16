@@ -54,16 +54,21 @@ Instale as dependências
   npm install
 ```
 
-Faça o build da aplicação
+Altere o arquivo `.env.example` com os seus dados e renomeie-o para `.env`
 
-```bash
-  npm run build
+```.yml
+# Exemplo
+PORT=3005
+DB_USER=root
+DB_PASS=123456
+DB_NAME=challenge_cashforce
+DB_PORT=3306
 ```
 
 Inicie o servidor
 
 ```bash
-  npm run start
+  npm run dev
 ```
 
 ### Para rodar o frontend
