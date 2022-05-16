@@ -26,6 +26,8 @@ O deploy do resultado final encontra-se nos links:
  - [Endpoint do backend](https://alexandre-pimentel-cashforce.herokuapp.com/order)
 
 
+![deploy no heroku](./images/cashfoce-deploy.jpeg)
+
 ## Rodando localmente
 
 Clone o projeto
