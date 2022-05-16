@@ -25,8 +25,9 @@ O deploy do resultado final encontra-se nos links:
  - [Frontend](https://alexandre-cashforce.herokuapp.com/)
  - [Endpoint do backend](https://alexandre-pimentel-cashforce.herokuapp.com/order)
 
-
 ![deploy no heroku](./images/cashfoce-deploy.jpeg)
+
+**OBS:** Como o heroku _adormece_ a aplicação, pode ser que o back não responda na primeira requisição. Então, caso o front não carregue, espere um pouco e atualize a página :wink:
 
 ## Rodando localmente
 
