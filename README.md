@@ -33,7 +33,7 @@ O deploy do resultado final encontra-se nos links:
 Clone o projeto
 
 ```bash
-  git clone https://link-para-o-projeto
+  git clone git@github.com:Alexandrexpjr/challenge-cashforce.git
 ```
 
 Entre no diretório do projeto
